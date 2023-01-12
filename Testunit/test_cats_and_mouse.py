@@ -29,3 +29,20 @@ class Cats_mouse(unittest.TestCase):
         result = cats_and_a_mouse.catAndMouse(cat_a,cat_b,mouse_c)
         self.assertEqual(expected_result, result)
 
+    def test_0_100_50_should_mouse_c(self):
+        cat_a = 0
+        cat_b = 100
+        mouse_c = 50
+        expected_result = "Mouse C"
+
+        result = cats_and_a_mouse.catAndMouse(cat_a,cat_b,mouse_c)
+        self.assertEqual(expected_result, result)
+
+    def test_90_100_91_should_cat_a(self):
+        cat_a = 90
+        cat_b = 100
+        mouse_c = 92
+        expected_result = "Cat A"
+
+        result = cats_and_a_mouse.catAndMouse(cat_a,cat_b,mouse_c)
+        self.assertEqual(expected_result, result)
