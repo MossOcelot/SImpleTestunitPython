@@ -5,7 +5,7 @@ def caesarCipher(s, k):
     lower_string = string.ascii_lowercase
     
     len_eng_char = 26
-    # print(upper_string,lower_string)
+    
     rotated_alpha = ''
     for c in s:
         if c in upper_string:
