@@ -1,0 +1,29 @@
+def two_characters(n,s):
+    assert(s.isalpha())
+    ans=0
+    for i in range(0,26):
+        for j in range(0,26):
+            if i==j:
+                continue
+            p1 = i
+            p2 = j
+            flag = 1
+            l = 0
+            for c in s:
+                if ord(c)-ord('a')!=p1 and ord(c)-ord('a')!=p2:
+                    continue
+                if ord(c)-ord('a') == p1:
+                    l = l + 1
+                    p1,p2 = p2,p1
+                else:
+                    flag = 0
+            if flag == 1 and l>1:
+                ans=max(ans,l)
+    return ans
+
+if __name__ == "__main__":
+    n= int(input())
+    s= input()
+    
+    result = two_characters(n, s)
+    print(result)
